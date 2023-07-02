@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace Z3_binding_do_klas
 {
@@ -29,6 +32,8 @@ namespace Z3_binding_do_klas
 
             MainListaAlbumow mainListaAlbumow = new MainListaAlbumow();
             mainListaAlbumow.DodajAlbum(tytul, artysta, gatunek);
+
+            this.Close();
         }
 
     }

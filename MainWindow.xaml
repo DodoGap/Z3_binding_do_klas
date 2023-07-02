@@ -21,10 +21,9 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-
-                        <TextBlock Text="{Binding Tytul}" Grid.Column="0"/>
-                        <TextBlock Text="{Binding Artysta}" Grid.Column="1" Margin="10,0,0,0"/>
-                        <TextBlock Text="{Binding Gatunek}" Grid.Column="2" Margin="10,0,0,0"/>
+                        <TextBlock Text="{Binding Path=Tytul}" Grid.Column="0"/>
+                        <TextBlock Text="{Binding Path=Artysta}" Grid.Column="1" Margin="10,0,0,0"/>
+                        <TextBlock Text="{Binding Path=Gatunek}" Grid.Column="2" Margin="10,0,0,0"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

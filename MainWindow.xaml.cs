@@ -22,25 +22,16 @@ namespace Z3_binding_do_klas
     {
         private const string sciezkaIO = "listaAlbumow.xml";
         private readonly ObservableCollection<Album> Albumy = new();
+        MainListaAlbumow ListaAlbumow = new MainListaAlbumow();
+
 
 
         public MainWindow()
         {
             InitializeComponent();
-            lista = FindName("lista") as ListBox;
+            ImportujButton_Click(this, new RoutedEventArgs());
             DataContext = Albumy;
 
-
-            // Deserializacja danych z pliku XML i przypisanie ich do kolekcji Albumy
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Album>));
-            using (FileStream stream = new FileStream(sciezkaIO, FileMode.Open))
-            {
-                List<Album> deserializedAlbumy = (List<Album>)serializer.Deserialize(stream);
-                foreach (Album album in deserializedAlbumy)
-                {
-                    Albumy.Add(album);
-                }
-            }
         }
 
         private void DodajButton_Click(object sender, RoutedEventArgs e)
@@ -48,6 +39,12 @@ namespace Z3_binding_do_klas
             Album nowy = new Album();
             Albumy.Add(nowy);
             new OknoDodajAlbum((Album)lista.SelectedItem).Show();
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow != null)
+            {
+                mainWindow.ImportujButton_Click(sender, e);
+            }
+
         }
 
         private void EdytujButton_Click(object sender, RoutedEventArgs e)
@@ -60,9 +57,7 @@ namespace Z3_binding_do_klas
 
         private void UsunButton_Click(object sender, RoutedEventArgs e)
         {
-            Albumy.Remove(
-                (Album)lista.SelectedItem
-                );
+            Albumy.Remove((Album)lista.SelectedItem);
         }
 
         private void ImportujButton_Click(object sender, RoutedEventArgs e)
@@ -76,6 +71,7 @@ namespace Z3_binding_do_klas
                 Albumy.Add(osoba);
             plik.Close();
         }
+
 
         private void EksportujButton_Click(object sender, RoutedEventArgs e)
         {

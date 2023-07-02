@@ -13,7 +13,7 @@ namespace Z3_binding_do_klas
 {
     public class MainListaAlbumow : INotifyPropertyChanged
     {
-        private const string sciezkaIO = "./listaAlbumow.xml";
+        private const string sciezkaIO = "listaAlbumow.xml";
         public ObservableCollection<Album> ListaAlbumow { get; set; } = new ObservableCollection<Album>();
 
         private Album wybranyAlbum;
@@ -56,6 +56,14 @@ namespace Z3_binding_do_klas
             ZapiszAlbumy();
         }
 
+        private MainWindow mainWindow;
+
+        public void SetMainWindow(MainWindow window)
+        {
+            mainWindow = window;
+        }
+
+
         public void ImportujAlbumy()
         {
             if (File.Exists(sciezkaIO))
@@ -64,10 +72,15 @@ namespace Z3_binding_do_klas
                 using (FileStream strumienOdczytu = new FileStream(sciezkaIO, FileMode.Open))
                 {
                     ObservableCollection<Album> albumy = (ObservableCollection<Album>)serializator.Deserialize(strumienOdczytu);
-                    ListaAlbumow = albumy;
+                    ListaAlbumow.Clear();
+                    foreach (Album album in albumy)
+                    {
+                        ListaAlbumow.Add(album);
+                    }
                 }
             }
         }
+
 
         public void ZapiszAlbumy()
         {
