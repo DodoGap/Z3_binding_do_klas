@@ -12,7 +12,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <ListBox x:Name="lista" Grid.Row="0" ItemsSource="{Binding Path=ListaAlbumow}">
+        <ListBox x:Name="lista" Grid.Row="0" ItemsSource="{Binding}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

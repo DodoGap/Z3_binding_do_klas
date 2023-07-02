@@ -20,7 +20,6 @@ namespace Z3_binding_do_klas
         {
             InitializeComponent();
             DataContext = album;
-
         }
 
         private void OK(object sender, RoutedEventArgs e)

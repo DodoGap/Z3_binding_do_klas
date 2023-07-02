@@ -32,9 +32,15 @@ namespace Z3_binding_do_klas
             ImportujAlbumy();
         }
 
-        public void DodajAlbum(Album album)
+        public void DodajAlbum(string tytul, string artysta, string gatunek)
         {
-            ListaAlbumow.Add(album);
+            Album nowyAlbum = new Album
+            {
+                Tytul = tytul,
+                Artysta = artysta,
+                Gatunek = gatunek
+            };
+            ListaAlbumow.Add(nowyAlbum);
             ZapiszAlbumy();
         }
 

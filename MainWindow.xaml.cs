@@ -45,12 +45,9 @@ namespace Z3_binding_do_klas
 
         private void DodajButton_Click(object sender, RoutedEventArgs e)
         {
-            Album nowyAlbum = new Album();
-            DodajAlbum oknoDodaj = new DodajAlbum(nowyAlbum);
-            if (oknoDodaj.ShowDialog() == true)
-            {
-                viewModel.DodajAlbum(nowyAlbum);
-            }
+            Album nowy = new Album();
+            Albumy.Add(nowy);
+            new OknoDodajAlbum((Album)lista.SelectedItem).Show();
         }
 
         private void EdytujButton_Click(object sender, RoutedEventArgs e)
@@ -70,12 +67,25 @@ namespace Z3_binding_do_klas
 
         private void ImportujButton_Click(object sender, RoutedEventArgs e)
         {
-            viewModel.ImportujAlbumy();
+            XmlSerializer serializator = new XmlSerializer(typeof(ObservableCollection<Album>));
+            FileStream plik = new FileStream(sciezkaIO, FileMode.Open);
+            ObservableCollection<Album> wczytane
+                = (ObservableCollection<Album>)serializator.Deserialize(plik);
+            Albumy.Clear();
+            foreach (Album osoba in wczytane)
+                Albumy.Add(osoba);
+            plik.Close();
         }
 
         private void EksportujButton_Click(object sender, RoutedEventArgs e)
         {
-            viewModel.EksportujAlbumy();
+            XmlSerializer serializator = new XmlSerializer(typeof(ObservableCollection<Album>));
+            TextWriter strumieńZapisu = new StreamWriter(sciezkaIO);
+            serializator.Serialize(
+                strumieńZapisu,
+                Albumy
+                );
+            strumieńZapisu.Close();
         }
 
     }

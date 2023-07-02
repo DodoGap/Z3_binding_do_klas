@@ -14,20 +14,16 @@ using System.Windows.Shapes;
 
 namespace Z3_binding_do_klas
 {
-    /// <summary>
-    /// Logika interakcji dla klasy DodajAlbum.xaml
-    /// </summary>
-    public partial class DodajAlbum : Window
+    public partial class OknoDodajAlbum : Window
     {
-        public DodajAlbum(Album album)
+        public OknoDodajAlbum(Album album)
         {
             InitializeComponent();
             DataContext = album;
-
         }
         private void OK(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            Close();
         }
     }
 }
