@@ -7,6 +7,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Threading;
 using System.Xml.Serialization;
 
 namespace Z3_binding_do_klas
@@ -98,6 +100,17 @@ namespace Z3_binding_do_klas
             {
                 serializator.Serialize(strumienZapisu, ListaAlbumow);
             }
+        }
+
+
+
+
+        public void EksportujPoDodaniu()
+        {
+            XmlSerializer serializator = new XmlSerializer(typeof(ObservableCollection<Album>));
+            TextWriter strumieńZapisu = new StreamWriter(sciezkaIO);
+            serializator.Serialize(strumieńZapisu, ListaAlbumow);
+            strumieńZapisu.Close();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -40,14 +40,9 @@ namespace Z3_binding_do_klas
         {
             Album nowy = new Album();
             Albumy.Add(nowy);
-            new OknoDodajAlbum((Album)lista.SelectedItem).Show();
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            if (mainWindow != null)
-            {
-                mainWindow.ImportujButton_Click(sender, e);
-            }
-
+            new OknoDodajAlbum(nowy).Show();
         }
+
 
         private void EdytujButton_Click(object sender, RoutedEventArgs e)
         {

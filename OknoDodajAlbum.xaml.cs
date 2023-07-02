@@ -21,17 +21,18 @@ namespace Z3_binding_do_klas
     {
         public OknoDodajAlbum(Album album)
         {
-            InitializeComponent();
             DataContext = album;
+            InitializeComponent();
+
         }
         private void OK(object sender, RoutedEventArgs e)
         {
-            string tytul = box_tytul.Text;
-            string artysta = box_artysta.Text;
-            string gatunek = box_gatunek.Text;
+            //string tytul = box_tytul.Text;
+            //string artysta = box_artysta.Text;
+            //string gatunek = box_gatunek.Text;
 
             MainListaAlbumow mainListaAlbumow = new MainListaAlbumow();
-            mainListaAlbumow.DodajAlbum(tytul, artysta, gatunek);
+            mainListaAlbumow.EksportujPoDodaniu();
 
             this.Close();
         }
