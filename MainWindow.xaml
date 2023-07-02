@@ -5,11 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Z3_binding_do_klas"
         mc:Ignorable="d"
-        Title="Album List" Height="400" Width="600">
+        Title="Album List" Height="500" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
 
         <ListBox x:Name="lista" Grid.Row="0" ItemsSource="{Binding}">
@@ -29,13 +34,12 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
-            <Button Click="DodajButton_Click">Dodaj</Button>
-            <Button Click="EdytujButton_Click" Margin="10,0">Edytuj</Button>
-            <Button Click="UsunButton_Click">Usuń</Button>
-            <Button Click="ImportujButton_Click" Margin="10,0">Importuj</Button>
-            <Button Click="EksportujButton_Click">Eksportuj</Button>
-        </StackPanel>
-
+        <!--<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">-->
+        <Button Width="200" Grid.Row="1" Click="DodajButton_Click" Margin="0,5">Dodaj</Button>
+        <Button Width="200" Grid.Row="2" Click="EdytujButton_Click">Edytuj</Button>
+        <Button Width="200" Grid.Row="3" Click="UsunButton_Click" Margin="0,5">Usuń</Button>
+        <Button Width="200" Grid.Row="4" Click="ImportujButton_Click">Importuj</Button>
+        <Button Width="200" Grid.Row="5" Click="EksportujButton_Click" Margin="0,5">Eksportuj</Button>
+        <TextBlock x:Name="statusText" Grid.Row="6" HorizontalAlignment="Left" Text="" FontSize="10"/>
     </Grid>
 </Window>

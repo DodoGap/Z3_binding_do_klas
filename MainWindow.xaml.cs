@@ -14,7 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using System.Xml.Serialization;
+
 
 namespace Z3_binding_do_klas
 {
@@ -69,6 +71,16 @@ namespace Z3_binding_do_klas
             Albumy.Clear();
             foreach (Album osoba in wczytane)
                 Albumy.Add(osoba);
+            statusText.Text = "Import danych z listaAlbumow.xml, zakończony.";
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(3);
+            timer.Tick += (s, args) =>
+            {
+                timer.Stop();
+                statusText.Text = ""; // Wyczyść tekst
+            };
+            timer.Start();
             plik.Close();
         }
 
@@ -81,6 +93,16 @@ namespace Z3_binding_do_klas
                 strumieńZapisu,
                 Albumy
                 );
+            statusText.Text = "Eksport danych do listaAlbumow.xml, zakończony.";
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(3);
+            timer.Tick += (s, args) =>
+            {
+                timer.Stop();
+                statusText.Text = ""; // Wyczyść tekst
+            };
+            timer.Start();
             strumieńZapisu.Close();
         }
 
