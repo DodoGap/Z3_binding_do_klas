@@ -23,7 +23,13 @@ namespace Z3_binding_do_klas
         }
         private void OK(object sender, RoutedEventArgs e)
         {
-            Close();
+            string tytul = box_tytul.Text;
+            string artysta = box_artysta.Text;
+            string gatunek = box_gatunek.Text;
+
+            MainListaAlbumow mainListaAlbumow = new MainListaAlbumow();
+            mainListaAlbumow.DodajAlbum(tytul, artysta, gatunek);
         }
+
     }
 }

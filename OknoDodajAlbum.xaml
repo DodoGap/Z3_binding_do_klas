@@ -20,13 +20,13 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Content="Tytuł:"/>
-        <TextBox Grid.Row="1" Text="{Binding Tytul,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+        <TextBox Name="box_tytul" Grid.Row="1" Text="{Binding Tytul,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
         <Label Grid.Row="2" Content="Artysta:"/>
-        <TextBox Grid.Row="3" Text="{Binding Artysta,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+        <TextBox Name="box_artysta" Grid.Row="3" Text="{Binding Artysta,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
         <Label Grid.Row="4" Content="Gatunek:"/>
-        <TextBox Grid.Row="5" Text="{Binding Gatunek,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+        <TextBox Name="box_gatunek" Grid.Row="5" Text="{Binding Gatunek,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
         <Button Grid.Row="6" Content="OK" Click="OK" Margin="5" Width="100" Height="30"/>
     </Grid>

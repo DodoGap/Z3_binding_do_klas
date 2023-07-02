@@ -34,13 +34,14 @@ namespace Z3_binding_do_klas
 
         public void DodajAlbum(string tytul, string artysta, string gatunek)
         {
-            Album nowyAlbum = new Album
+            Album album = new Album
             {
                 Tytul = tytul,
                 Artysta = artysta,
                 Gatunek = gatunek
             };
-            ListaAlbumow.Add(nowyAlbum);
+
+            ListaAlbumow.Add(album);
             ZapiszAlbumy();
         }
 
