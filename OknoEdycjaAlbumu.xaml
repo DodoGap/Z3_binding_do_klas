@@ -1,0 +1,33 @@
+﻿<Window x:Class="Z3_binding_do_klas.OknoEdycjaAlbumu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Z3_binding_do_klas"
+        mc:Ignorable="d"
+        Title="Edycja Albumu" Height="240" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Tytuł:"/>
+        <TextBox Grid.Row="1" Text="{Binding Tytul,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <Label Grid.Row="2" Content="Artysta:"/>
+        <TextBox Grid.Row="3" Text="{Binding Artysta,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <Label Grid.Row="4" Content="Gatunek:"/>
+        <TextBox Grid.Row="5" Text="{Binding Gatunek,UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <Button Grid.Row="6" Content="OK" Click="OK" Margin="5" Width="100" Height="30"/>
+    </Grid>
+</Window>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Album>
+    <Tytul>Anarchy in the U.K.</Tytul>
+    <Artysta>Sex Pistols</Artysta>
+    <Gatunek>Punk rock</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Blitzkrieg Bop</Tytul>
+    <Artysta>The Ramones</Artysta>
+    <Gatunek>Punk rock</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>London Calling</Tytul>
+    <Artysta>The Clash</Artysta>
+    <Gatunek>Punk rock, Post-punk</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Basket Case</Tytul>
+    <Artysta>Green Day</Artysta>
+    <Gatunek>Punk rock, Pop punk</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Holiday in Cambodia</Tytul>
+    <Artysta>Dead Kennedys</Artysta>
+    <Gatunek>Punk rock</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Stairway to Heaven</Tytul>
+    <Artysta>Led Zeppelin</Artysta>
+    <Gatunek>Rock, Hard rock</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Bohemian Rhapsody</Tytul>
+    <Artysta>Queen</Artysta>
+    <Gatunek>Rock, Progressive rock</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Johnny B. Goode</Tytul>
+    <Artysta>Chuck Berry</Artysta>
+    <Gatunek>Rock and Roll</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Purple Haze</Tytul>
+    <Artysta>The Jimi Hendrix Experience</Artysta>
+    <Gatunek>Rock, Psychedelic rock</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Back in Black</Tytul>
+    <Artysta>AC/DC</Artysta>
+    <Gatunek>Rock, Hard rock</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Smack My Bitch Up</Tytul>
+    <Artysta>The Prodigy</Artysta>
+    <Gatunek>Techno, Big beat</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Sonar System</Tytul>
+    <Artysta>Chris Liebing</Artysta>
+    <Gatunek>Techno</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Spastik</Tytul>
+    <Artysta>Plastikman</Artysta>
+    <Gatunek>Techno</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Energy Flash</Tytul>
+    <Artysta>Joey Beltram</Artysta>
+    <Gatunek>Techno</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>Windowlicker</Tytul>
+    <Artysta>Aphex Twin</Artysta>
+    <Gatunek>Techno, IDM</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>asd</Tytul>
+    <Artysta>asd</Artysta>
+    <Gatunek>asd</Gatunek>
+  </Album>
+  <Album>
+    <Tytul>asdasdasd</Tytul>
+    <Artysta>asdasdasd</Artysta>
+    <Gatunek>asdasdasd</Gatunek>
+  </Album>
+</ArrayOfAlbum>
